@@ -70,22 +70,6 @@ try {
       return properties;
     };
 
-    Array.prototype.each = function (proc) {
-      for (var i = 0; i < this.length; ++i) {
-        proc.call(this, this[i], i);
-      }
-    };
-
-    Array.prototype.select = function (proc) {
-      var selected = [];
-      for (var i = 0; i < this.length; ++i) {
-        if (proc.call(this, this[i], i)) {
-          selected.push(this[i]);
-        }
-      }
-      return selected;
-    };
-
     function Event() { }
     Event.on = function (object, eventName, thisObj, handlerName) {
       object.addEventListener(eventName,
@@ -182,17 +166,17 @@ try {
         var charCount = {};
 
         var charTypes = this.CHAR_LIST.properties()
-        .select(function (charType) {
+        .filter(function (charType) {
           return $(charType).checked;
 
-        }).each(function (charType, i) {
+        }).forEach(function (charType, i, charTypes) {
           var count = 0;
-          if (i == this.length - 1) {
+          if (i == charTypes.length - 1) {
             count = restCount;
 
           } else {
             var baseCount =
-              restCount / (this.length - i);
+              restCount / (charTypes.length - i);
 
             count = Math.ceil(baseCount *
               (Math.random() * 100 + 50) / 100);
@@ -215,7 +199,7 @@ try {
 
       generatePassword: function (charCount) {
         var charTypes = [];
-        charCount.properties().each(function (charType) {
+        charCount.properties().forEach(function (charType) {
           var count = charCount[charType];
 //          alert(charType + ": " + count);
           for (var i = 0; i < count; ++i) {
@@ -228,7 +212,7 @@ try {
          alert(charTypes);
         var self = this;
         var password = [];
-        charTypes.each(function (charType, charNo) {
+        charTypes.forEach(function (charType, charNo) {
 //          alert(charType);
           var leftRight = (Math.floor(charNo / 2) % 2) == 0 ? "L" : "R";
           var charList = self.CHAR_LIST[charType][leftRight];
