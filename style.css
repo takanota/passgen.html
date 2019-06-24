@@ -1,0 +1,44 @@
+body {
+  margin: 0ex;
+  padding: 0ex;
+  background-color: #222;
+  color: #eee;
+  font-size: 14pt;
+  font-family: sans-serif;
+}
+
+h1 {
+  margin: 0ex;
+  padding: 1ex;
+  background-color: #333;
+}
+
+ul {
+  list-style: none;
+  margin: 0ex;
+  padding: 1ex 2ex;
+}
+
+ul#history {
+  font-family: monospace;
+}
+
+input#length {
+  width: 6ex;
+  padding: 1ex;
+  text-align: right;
+  font-family: monospace;
+}
+
+input[type=checkbox] {
+  width: 3ex;
+  height: 3ex;
+}
+
+button#generateButton {
+  display: block;
+  margin: 2ex auto; 2ex auto;
+  width: 12ex;
+  height: 4ex;
+  font-size: large;
+}

@@ -88,7 +88,7 @@ PasswordGenerator.prototype = {
   },
 
   setEventListeners: function() {
-    Event.on($("generate_button"), "click", this, "onClickGenerateButton");
+    Event.on($("generateButton"), "click", this, "onClickGenerateButton");
     Event.on($("lengh"), "blur", this, "onBlurLength");
   },
 

@@ -4,34 +4,38 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width" />
   <title>Password Generator</title>
-  <script type="text/javascript" src="script.js">
-  </script>
+  <script type="text/javascript" src="./script.js"></script>
+  <link rel="stylesheet" type="text/css" href="./style.css" />
 </head>
 <body>
-  <!-- h1>Password Generator</h1 -->
-  <div>
-    <label>
-      <span>length</span>
-      <input id="length" type="text" />
-    </label>
-    <label>
-      <input id="upperAlphabet" type="checkbox" />
-      <span>upper-alphabet</span>
-    </label>
-    <label>
-      <input id="lowerAlphabet" type="checkbox" />
-      <span>lower-alphabet</span>
-    </label>
-    <label>
-      <input id="number" type="checkbox" />
-      <span>number</span>
-    </label>
-    <label>
-      <input id="symbol" type="checkbox" />
-      <span>symbol</span>
-    </label>
-    <button id="generate_button">Generate</button>
-  </div>
-  <ul id="history"></ul>
+  <header>
+    <h1>Password Generator</h1>
+  </header>
+  <main>
+    <ul>
+      <li>
+        <label for="length">length</label>
+        <input id="length" type="text" />
+      </li>
+      <li>
+        <input id="upperAlphabet" type="checkbox" />
+        <label for="upperAlphabet">upper-alphabet</label>
+      </li>
+      <li>
+        <input id="lowerAlphabet" type="checkbox" />
+        <label for="lowerAlphabet">lower-alphabet</label>
+      </li>
+      <li>
+        <input id="number" type="checkbox" />
+        <label for="number">number</label>
+      </li>
+      <li>
+        <input id="symbol" type="checkbox" />
+        <label for="symbol">symbol</label>
+      </li>
+    </ul>
+    <button id="generateButton">Generate</button>
+    <ul id="history"></ul>
+  </main>
 </body>
 </html>
