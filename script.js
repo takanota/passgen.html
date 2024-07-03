@@ -57,12 +57,12 @@ PasswordGenerator.prototype = {
 
   CHAR_LIST: {
     upperAlphabet: {
-      L: "QWERTASDFGZXCV",
-      R: "YUIOPHJKLBNM"
+      L: "QWERTASDFGZXCVB",
+      R: "YUIOPHJKLNM"
     },
     lowerAlphabet: {
-      L: "qwertasdfgzxcv",
-      R: "yuiophjklbnm"
+      L: "qwertasdfgzxcvb",
+      R: "yuiophjklnm"
     },
     number: {
       L: "12345",
